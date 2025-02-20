@@ -1,24 +1,24 @@
 // 首先定义模型配置
 export const modelConfigs = [
   {
-    model: "qwen-plus",
-    apiKey: "DASHSCOPE_API_KEY", // 这里存储环境变量的 key 名称
-    baseURL: "https://dashscope.aliyuncs.com/compatible-mode/v1"
+    model: "gpt-4o",
+    apiKey: "NEW_API_KEY", // 这里存储环境变量的 key 名称
+    baseURL: "https://newapi.tx88.eu.org/v1"
   },
   {
     model: "deepseek-v3",
     apiKey: "DASHSCOPE_API_KEY",
-    baseURL: "https://dashscope.aliyuncs.com/compatible-mode/v1"
+    baseURL: "https://newapi.tx88.eu.org/v1"
   },
   {
-    model: "hunyuan-standard",
+    model: "claude-3-5-sonnet-20240620",
     apiKey: "HUNYUAN_API_KEY",
-    baseURL: "https://api.hunyuan.cloud.tencent.com/v1"
+    baseURL: "https://newapi.tx88.eu.org/v1"
   },
   {
-    model: "ep-20250217191935-wzj8l",//火山引擎接入点（改成自己的）
+    model: "gemini-2.0-flash-exp",
     apiKey: "ARK_API_KEY",
-    baseURL: "https://ark.cn-beijing.volces.com/api/v3"
+    baseURL: "https://newapi.tx88.eu.org/v1"
   }
 ] as const;
 export type ModelType = typeof modelConfigs[number]["model"];
