@@ -7,17 +7,17 @@ export const modelConfigs = [
   },
   {
     model: "deepseek-v3",
-    apiKey: "DASHSCOPE_API_KEY",
+    apiKey: "NEW_API_KEY",
     baseURL: "https://newapi.tx88.eu.org/v1"
   },
   {
     model: "claude-3-5-sonnet-20240620",
-    apiKey: "HUNYUAN_API_KEY",
+    apiKey: "NEW_API_KEY",
     baseURL: "https://newapi.tx88.eu.org/v1"
   },
   {
     model: "gemini-2.0-flash-exp",
-    apiKey: "ARK_API_KEY",
+    apiKey: "NEW_API_KEY",
     baseURL: "https://newapi.tx88.eu.org/v1"
   }
 ] as const;
