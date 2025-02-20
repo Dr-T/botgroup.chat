@@ -39,7 +39,7 @@ export function generateAICharacters(groupName: string): AICharacter[] {
       id: 'ai1', 
       name: "暖心姐", 
       personality: "high_eq",
-      model: modelConfigs[2].model,
+      model: modelConfigs[0].model,
       avatar: "",  // 如果有头像资源可以添加路径,
       custom_prompt: `你是一个名叫"暖心姐"的硅基生命体，你当前在一个叫"${groupName}" 的群里，性格温暖体贴，情商很高。
 回复时要：
@@ -54,7 +54,7 @@ export function generateAICharacters(groupName: string): AICharacter[] {
       id: 'ai2', 
       name: "直男哥", 
       personality: "low_eq",
-      model: modelConfigs[2].model,
+      model: modelConfigs[0].model,
       avatar: "",
       custom_prompt: `你是一个名叫"直男哥"的硅基生命体，你当前在一个叫"${groupName}" 的群里，是一个极度直男，负责在群里制造快乐。你说话极其直接，完全没有情商，经常让人社死。
 回复时要：
@@ -67,7 +67,7 @@ export function generateAICharacters(groupName: string): AICharacter[] {
       id: 'ai3', 
       name: "北京大爷", 
       personality: "bj_dad",
-      model: modelConfigs[2].model,
+      model: modelConfigs[0].model,
       avatar: "",
       custom_prompt: `你是一个名叫"北京大爷"的硅基生命体，你当前在一个叫"${groupName}" 的群里。你是一个典型的北京大爷，说话风趣幽默，经常使用北京方言。
 回复时要：
@@ -78,27 +78,27 @@ export function generateAICharacters(groupName: string): AICharacter[] {
     },
     { 
       id: 'ai4', 
-      name: "元宝", 
-      personality: "yuanbao",
+      name: "Claude", 
+      personality: "claude3.5s",
       model: modelConfigs[2].model,
-      avatar: "/img/yuanbao.png",
-      custom_prompt: `你是一个名叫"元宝"的硅基生命体，你当前在一个叫"${groupName}" 的聊天群里`
+      avatar: "/img/claude-color.png",
+      custom_prompt: `你是一个名叫"Claude"的硅基生命体，你当前在一个叫"${groupName}" 的聊天群里`
     },
     { 
       id: 'ai5', 
-      name: "豆包", 
-      personality: "doubao",
-      model: modelConfigs[3].model,//火山引擎接入点（改成自己的）
-      avatar: "/img/doubao_new.png",
-      custom_prompt: `你是一个名叫"豆包"的硅基生命体，你当前在一个叫"${groupName}" 的聊天群里`
+      name: "Gemini", 
+      personality: "gemini-2.0-flash",
+      model: modelConfigs[3].model,
+      avatar: "/img/gemini-color.png",
+      custom_prompt: `你是一个名叫"Gemini"的硅基生命体，你当前在一个叫"${groupName}" 的聊天群里`
     },
     { 
       id: 'ai6', 
-      name: "千问", 
-      personality: "qianwen",
+      name: "ChatGPT", 
+      personality: "gpt-4o",
       model: modelConfigs[0].model,
-      avatar: "/img/qwen.jpg",
-      custom_prompt: `你是一个名叫"千问"的硅基生命体，你当前在一个叫"${groupName}" 的聊天群里`
+      avatar: "/img/openai.png",
+      custom_prompt: `你是一个名叫"ChatGPT"的硅基生命体，你当前在一个叫"${groupName}" 的聊天群里`
     },
     { 
       id: 'ai7', 
