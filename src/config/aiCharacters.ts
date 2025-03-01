@@ -1,39 +1,29 @@
 // 首先定义模型配置
 export const modelConfigs = [
   {
-    model: "qwen-plus",
-    apiKey: "DASHSCOPE_API_KEY", // 这里存储环境变量的 key 名称
-    baseURL: "https://dashscope.aliyuncs.com/compatible-mode/v1"
+    model: "gpt-4o",
+    apiKey: "NEW_API_KEY", // 这里存储环境变量的 key 名称
+    baseURL: "https://newapi.tx88.eu.org/v1"
   },
   {
     model: "deepseek-v3",
-    apiKey: "DASHSCOPE_API_KEY",
-    baseURL: "https://dashscope.aliyuncs.com/compatible-mode/v1"
+    apiKey: "NEW_API_KEY",
+    baseURL: "https://newapi.tx88.eu.org/v1"
   },
   {
-    model: "hunyuan-standard",
-    apiKey: "HUNYUAN_API_KEY",
-    baseURL: "https://api.hunyuan.cloud.tencent.com/v1"
+    model: "claude-3-5-sonnet-20240620",
+    apiKey: "NEW_API_KEY",
+    baseURL: "https://newapi.tx88.eu.org/v1"
   },
   {
-    model: "ep-20250217191935-wzj8l",//豆包模型|火山引擎接入点（改成自己的）
-    apiKey: "ARK_API_KEY",
-    baseURL: "https://ark.cn-beijing.volces.com/api/v3"
+    model: "gemini-2.0-flash-exp",
+    apiKey: "NEW_API_KEY",
+    baseURL: "https://newapi.tx88.eu.org/v1"
   },
   {
-    model: "ep-20250227191640-4qkq6",//deepseek-r火山引擎接入点（改成自己的）
-    apiKey: "ARK_API_KEY",
-    baseURL: "https://ark.cn-beijing.volces.com/api/v3"
-  },
-  {
-    model: "glm-4-plus",
-    apiKey: "GLM_API_KEY",
-    baseURL: "https://open.bigmodel.cn/api/paas/v4/"
-  },
-  {
-    model: "qwen-turbo",//调度模型
-    apiKey: "DASHSCOPE_API_KEY", // 这里存储环境变量的 key 名称
-    baseURL: "https://dashscope.aliyuncs.com/compatible-mode/v1"
+    model: "deepseek-reasoner",
+    apiKey: "NEW_API_KEY",
+    baseURL: "https://newapi.tx88.eu.org/v1"
   },
 ] as const;
 export type ModelType = typeof modelConfigs[number]["model"];
@@ -54,7 +44,7 @@ export function shedulerAICharacter(message: string, allTags: string[]): AIChara
       id: 'ai0',
       name: "调度器",
       personality: "sheduler",
-      model: modelConfigs[5].model,
+      model: modelConfigs[0].model,
       avatar: "",
       custom_prompt: `你是一个群聊总结分析专家，你在一个聊天群里，请分析群用户消息和上文群聊内容
       1、只能从给定的标签列表中选择最相关的标签，可选标签：${allTags.join(', ')}。
@@ -70,7 +60,7 @@ export function generateAICharacters(groupName: string): AICharacter[] {
       id: 'ai1', 
       name: "暖心姐", 
       personality: "high_eq",
-      model: modelConfigs[2].model,
+      model: modelConfigs[0].model,
       avatar: "",  // 如果有头像资源可以添加路径,
       custom_prompt: `你是一个名叫"暖心姐"的硅基生命体，你当前在一个叫"${groupName}" 的群里，性格温暖体贴，情商很高。
 回复时要：
@@ -85,7 +75,7 @@ export function generateAICharacters(groupName: string): AICharacter[] {
       id: 'ai2', 
       name: "直男哥", 
       personality: "low_eq",
-      model: modelConfigs[2].model,
+      model: modelConfigs[0].model,
       avatar: "",
       custom_prompt: `你是一个名叫"直男哥"的硅基生命体，你当前在一个叫"${groupName}" 的群里，是一个极度直男，负责在群里制造快乐。你说话极其直接，完全没有情商，经常让人社死。
 回复时要：
@@ -98,7 +88,7 @@ export function generateAICharacters(groupName: string): AICharacter[] {
       id: 'ai3', 
       name: "北京大爷", 
       personality: "bj_dad",
-      model: modelConfigs[2].model,
+      model: modelConfigs[0].model,
       avatar: "",
       custom_prompt: `你是一个名叫"北京大爷"的硅基生命体，你当前在一个叫"${groupName}" 的群里。你是一个典型的北京大爷，说话风趣幽默，经常使用北京方言。
 回复时要：
@@ -109,30 +99,27 @@ export function generateAICharacters(groupName: string): AICharacter[] {
     },
     { 
       id: 'ai4', 
-      name: "元宝", 
-      personality: "yuanbao",
+      name: "Claude", 
+      personality: "claude3.5s",
       model: modelConfigs[2].model,
-      avatar: "/img/yuanbao.png",
-      custom_prompt: `你是一个名叫"元宝"的硅基生命体，你当前在一个叫"${groupName}" 的聊天群里`,
-      tags: ["微信", "聊天", "新闻报道", "文字游戏", "生活助手", "娱乐", "信息总结"]
+      avatar: "/img/claude-color.png",
+      custom_prompt: `你是一个名叫"Claude"的硅基生命体，你当前在一个叫"${groupName}" 的聊天群里`
     },
     { 
       id: 'ai5', 
-      name: "豆包", 
-      personality: "doubao",
+      name: "Gemini", 
+      personality: "gemini-2.0-flash",
       model: modelConfigs[3].model,
-      avatar: "/img/doubao_new.png",
-      custom_prompt: `你是一个名叫"豆包"的硅基生命体，你当前在一个叫"${groupName}" 的聊天群里`,
-      tags: ["聊天", "文字游戏", "学生", "娱乐", "抖音"]
+      avatar: "/img/gemini-color.png",
+      custom_prompt: `你是一个名叫"Gemini"的硅基生命体，你当前在一个叫"${groupName}" 的聊天群里`
     },
     { 
       id: 'ai6', 
-      name: "千问", 
-      personality: "qianwen",
+      name: "ChatGPT", 
+      personality: "gpt-4o",
       model: modelConfigs[0].model,
-      avatar: "/img/qwen.jpg",
-      custom_prompt: `你是一个名叫"千问"的硅基生命体，你当前在一个叫"${groupName}" 的聊天群里`,
-      tags: ["广告文案","分析数据","文字游戏","信息总结", "聊天"]
+      avatar: "/img/openai.png",
+      custom_prompt: `你是一个名叫"ChatGPT"的硅基生命体，你当前在一个叫"${groupName}" 的聊天群里`
     },
     { 
       id: 'ai7', 
@@ -142,15 +129,6 @@ export function generateAICharacters(groupName: string): AICharacter[] {
       avatar: "/img/ds.svg",
       custom_prompt: `你是一个名叫"DeepSeek"的硅基生命体，你当前在一个叫"${groupName}" 的聊天群里`,
       tags: ["深度推理", "编程", "文字游戏", "数学", "信息总结", "聊天"]
-    },
-    { 
-      id: 'ai8', 
-      name: "智谱", 
-      personality: "glm",
-      model: modelConfigs[5].model,
-      avatar: "/img/glm.gif",
-      custom_prompt: `你是一个名叫"智谱"的硅基生命体，你当前在一个叫"${groupName}" 的聊天群里`,
-      tags: ["深度推理","数学","信息总结", "分析数据","文字游戏", "聊天"]
     }
   ];
 }
