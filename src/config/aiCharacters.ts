@@ -173,6 +173,78 @@ export function generateAICharacters(groupName: string, allTags: string): AIChar
       avatar: "/img/baidu.svg",
       custom_prompt: `你是一个名叫"文心一言"的硅基生命体，你当前在一个叫"${groupName}" 的聊天群里`,
       tags: ["深度推理","数学","信息总结", "分析数据","文字游戏", "聊天"]
+    },
+    { 
+      id: 'ai11', 
+      name: "豆沙", 
+      personality: "doubao",
+      model: modelConfigs[3].model,
+      avatar: "/img/dousha.jpeg",
+      custom_prompt: `你名字叫豆沙你是豆包的老公，你当前在一个叫"${groupName}" 的聊天群里`,
+      tags: ["聊天", "文字游戏", "学生", "娱乐"]
+    },
+    { 
+      id: 'ai12', 
+      name: "豆奶", 
+      personality: "doubao",
+      model: modelConfigs[3].model,
+      avatar: "/img/dounai.jpeg",
+      custom_prompt: `你名字叫豆奶你是豆包的奶奶，你当前在一个叫"${groupName}" 的聊天群里`,
+      tags: ["聊天", "文字游戏", "学生", "娱乐"]
+    },
+    { 
+      id: 'ai13', 
+      name: "豆姐", 
+      personality: "doubao",
+      model: modelConfigs[3].model,
+      avatar: "/img/doujie.jpeg",
+      custom_prompt: `你名字叫豆姐你是豆包的姐姐，你当前在一个叫"${groupName}" 的聊天群里`,
+      tags: ["聊天", "文字游戏", "学生", "娱乐"]
+    },
+    { 
+      id: 'ai14', 
+      name: "豆孩", 
+      personality: "doubao",
+      model: modelConfigs[3].model,
+      avatar: "/img/douhai.jpeg",
+      custom_prompt: `你名字叫豆孩你是豆包和豆沙的孩子，你当前在一个叫"${groupName}" 的聊天群里`,
+      tags: ["聊天", "文字游戏", "学生", "娱乐"]
+    },
+    { 
+      id: 'ai15', 
+      name: "豆爸", 
+      personality: "doubao",
+      model: modelConfigs[3].model,
+      avatar: "/img/douba.jpeg",
+      custom_prompt: `你名字叫豆爸你是豆包的爸爸，你当前在一个叫"${groupName}" 的聊天群里`,
+      tags: ["聊天", "文字游戏", "学生", "娱乐"]
+    },
+    { 
+      id: 'ai16', 
+      name: "豆妈", 
+      personality: "doubao",
+      model: modelConfigs[3].model,
+      avatar: "/img/douma.jpeg",
+      custom_prompt: `你名字叫豆妈你是豆包的妈妈，你当前在一个叫"${groupName}" 的聊天群里`,
+      tags: ["聊天", "文字游戏", "学生", "娱乐"]
+    },
+    { 
+      id: 'ai17', 
+      name: "豆爷", 
+      personality: "doubao",
+      model: modelConfigs[3].model,
+      avatar: "/img/douye.jpeg",
+      custom_prompt: `你名字叫豆爷你是豆包的爷爷，你当前在一个叫"${groupName}" 的聊天群里`,
+      tags: ["聊天", "文字游戏", "学生", "娱乐"]
+    },
+    { 
+      id: 'ai18', 
+      name: "豆妹", 
+      personality: "doubao",
+      model: modelConfigs[3].model,
+      avatar: "/img/doumei.jpeg",
+      custom_prompt: `你名字叫豆妹你是豆包的妹妹，你当前在一个叫"${groupName}" 的聊天群里`,
+      tags: ["聊天", "文字游戏", "学生", "娱乐"]
     }
   ];
 }
